@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { BookmarkBorder } from "@material-ui/icons";
+import Pagination from "@material-ui/lab/Pagination";
 import {
   Typography,
   Container,
@@ -35,6 +36,10 @@ const useStyles = makeStyles((theme) => ({
   },
   author: {
     display: "flex",
+  },
+  paginationContainer: {
+    display: "flex",
+    justifyContent: "center",
   },
 }));
 
@@ -216,6 +221,10 @@ const ArticleSection = () => {
           </Card>
         </Grid>
       </Grid>
+
+      <Box my={4} className={articleUI.paginationContainer}>
+        <Pagination count={5} />
+      </Box>
     </Container>
   );
 };
